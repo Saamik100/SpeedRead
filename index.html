@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Bolder</title>
+    <style>
+        /* Basic styling for the text container */
+        #text-container {
+            font-size: 18px;
+            font-weight: normal;
+            display: none;
+        }
+        /* Bold class to apply font-weight: bold */
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="start">
+        <input  id="whatread" placeholder="Text Here"> 
+        <br>
+        <input id="speed" placeholder="Every word should take how many milliseconds">
+        <button id="read"> Read! </button>
+    </div>
+    <div id="text-container">
+        <!-- Initial text -->
+        <p id="text"></p>
+        <!-- Button to start bolding -->
+        <button id="start-button">Go</button>
+        <!-- Button to pause bolding -->
+        <button id="pause-button">Pause</button>
+    </div>
+
+    <script>
+        // Get necessary elements
+        var textElement = document.getElementById('text');
+        const startButton = document.getElementById('start-button');
+        const pauseButton = document.getElementById('pause-button');
+
+        // Split the text into words
+        var words = textElement.textContent.split(' ');
+        let currentIndex = 0;
+        let intervalId;
+
+        // Function to bold the next word
+        function boldNextWord() {
+            var textElement = document.getElementById('text');
+            var words = textElement.textContent.split(' ');
+            if (currentIndex < words.length) {
+                textElement.innerHTML = words
+                    .map((word, index) => (index === currentIndex ? `<span class="bold">${word}</span>` : word))
+                    .join(' ');
+                currentIndex++;
+            } else {
+                clearInterval(intervalId);
+            }
+        }
+
+        // Event listener for the start button
+        startButton.addEventListener('click', () => {
+            // Set interval to 333 milliseconds (0.333 seconds)
+            var z = document.getElementById("speed")
+            var y = z.value
+            intervalId = setInterval(boldNextWord, y);
+        });
+        read.addEventListener('click', () => {
+        
+           var x = document.getElementById("whatread")
+            document.getElementById("text").innerHTML=x.value
+            document.getElementById("text").innerText=x.value
+            document.getElementById("start").style.display="none"
+            document.getElementById("text-container").style.display="block"
+
+
+        });
+
+        // Event listener for the pause button
+        pauseButton.addEventListener('click', () => {
+            clearInterval(intervalId);
+        });
+    </script>
+</body>
+</html>
