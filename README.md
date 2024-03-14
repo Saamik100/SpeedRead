@@ -5,3 +5,5 @@ Reading may take a long time. Several studies have proved this is due to two fac
 
 This fixes the first issue by forcing you to go at a fast pace so you don't have enough time to subvocalize as you can choose your own reading speed. 
 It fixes the second issue by constantly giving you a reminder of the word you are on by bolding it just like your finger would as a pointer. 
+
+To test out this website and see if it improved your reading speed go to Saamik100.github.io/SpeedRead
