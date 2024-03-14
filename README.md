@@ -7,5 +7,9 @@ This fixes the first issue by forcing you to go at a fast pace so you don't have
 It fixes the second issue by constantly giving you a reminder of the word you are on by bolding it just like your finger would as a pointer. 
 Notice: This only works for text you can copy and paste into the website. 
 
-The average reeding speed is 250 WPM or a word every 240 MS. See if you can beat that time by setting the next word to be bolded at a time of your amount. 
+The average reeding speed is 300 WPM or a word every 200 MS. See if you can beat that time by setting the next word to be bolded at a time of your amount. 
 To test out this website and see if it improved your reading speed go to Saamik100.github.io/SpeedRead
+
+
+
+Notice: If you are ever reading slower than you normally read without this tool, decrease how long each word will be bolded for. 
